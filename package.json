@@ -1,0 +1,39 @@
+{
+  "name": "babylonjselectron",
+  "version": "1.0.0",
+  "description": "This is a babylonjs electron sample",
+  "main": "./app/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "electron ./app/main.js",
+    "dist": "build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babylonjs": "^3.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.2",
+    "electron-builder": "^19.49.0",
+    "electron": "^1.7.9"
+  },
+  "build": {
+    "appId": "yourappid",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 0
+        },
+        {
+          "x": 240,
+          "y": 0,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
