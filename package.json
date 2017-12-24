@@ -34,6 +34,9 @@
           "path": "/Applications"
         }
       ]
+    },
+    "win" : {
+        "target": "portable"
     }
   }
 }
