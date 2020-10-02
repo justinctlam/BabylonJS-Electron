@@ -1,4 +1,5 @@
 import * as BABYLON from 'babylonjs';
+import 'babylonjs-loaders'
 
 export default class Renderer {
     private _canvas: HTMLCanvasElement;
