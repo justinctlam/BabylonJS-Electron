@@ -1,10 +1,10 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, systemPreferences } from "electron";
 import * as path from "path";
 import * as url from "url";
 
 let mainWindow: Electron.BrowserWindow;
 
-function createWindow() {
+async function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     height: 600,
@@ -23,6 +23,9 @@ function createWindow() {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  // Ask for microphone access
+  const granted = await systemPreferences.askForMediaAccess('microphone');
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
