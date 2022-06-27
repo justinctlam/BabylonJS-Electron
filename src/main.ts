@@ -24,9 +24,6 @@ async function createWindow() {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 
-  // Ask for microphone access
-  // const granted = await systemPreferences.askForMediaAccess('microphone');
-
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
     // Dereference the window object, usually you would store windows
